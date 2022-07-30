@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 const quotes = [
-  {quote:'The journey of a thousand miles begins with one step.', source:'Lao Tzu'},
+  {quote:'The journey of a thousand miles begins with one step.', source:'Lao Tzu', citation:'Dao De Jing', year:'2001'},
   {quote:'That which does not kill us makes us stronger.', source:'Friedrich Nietzsche'},
   {quote:'Life is what happens when youre busy making other plans.', source:'John Lennon'},
   {quote:'When the going gets tough, the tough get going."', source:'Joe Kennedy'},
@@ -39,9 +39,10 @@ function getRandomQuote(){
 ***/
 function printQuote(){
   let ranQ = getRandomQuote();
+  //this inputs the code to display quotes into the tag with the id quote-box and it inherits the styless applied//
   document.getElementById('quote-box').innerHTML =`
   <p class="quote">${ranQ.quote}</p>
-  <p class="source">${ranQ.source}</p>`
+  <p class="source">${ranQ.source}<span class="citation">${ranQ.citation}</span><span class="year">${ranQ.year}</span></p>`
 }
 
 
